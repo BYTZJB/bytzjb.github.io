@@ -18,7 +18,7 @@
 <meta property="og:description" content="无状态对象一定是线程安全的  无状态对象：不包含任何和域，也不包含任何对其他类中域的引用。计算过程中的临时状态仅存在域线程栈上的局部变量中，并且只能由正在执行的线程访问。
 
 竞态条件  当某个计算的正确性取决域多个线程交替执行的时序是，那么就会发生竞态条件。  一般竞态条件的本质就是——基于一种可能失效的观察结果来做出判断或者执行某个计算，这种类型的竞态条件称为“先检查后执行”：首先观察到某个条">
-<meta property="og:updated_time" content="2016-10-29T16:55:50.024Z">
+<meta property="og:updated_time" content="2016-10-30T03:58:31.201Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线程安全性">
 <meta name="twitter:description" content="无状态对象一定是线程安全的  无状态对象：不包含任何和域，也不包含任何对其他类中域的引用。计算过程中的临时状态仅存在域线程栈上的局部变量中，并且只能由正在执行的线程访问。
@@ -166,7 +166,19 @@
 </li>
 <li><p>竞态条件<br>  当某个计算的正确性取决域多个线程交替执行的时序是，那么就会发生竞态条件。<br>  一般竞态条件的本质就是——基于一种可能失效的观察结果来做出判断或者执行某个计算，这种类型的竞态条件称为“先检查后执行”：首先观察到某个条件状态为A，然后根据这个观察结果采取相应的动作，但事实上，在采取动作之前，该状态已经不是A了，从而导致了不可预测的结果。</p>
 </li>
+<li><p>同步代码块 Synchronized Block<br>  同步代码块分为两个部分，一个作为锁对象的引用，一个作为由这个锁保护的代码块。是这个代码块变成一个原子操作。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">synchronized (lock) &#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
 </ul>
+<p>因为没次只有一个线程能执行内置锁保护的代码块，所以这个代码块其实是被原子化了，变成了一个原子操作。虽然保证了线程安全，但是要注意并发性问题，做不好就会降低并发性。</p>
+<ul>
+<li>重入<br>一个线程试图获取一个已经由他自己持有的锁，这个请求会成功，就是重入。</li>
+</ul>
+<hr>
+<blockquote>
+<p>对于每个包含多个变量的不变性条件，其中涉及的所有变量都需要由同一个锁来保护 </p>
+</blockquote>
+<hr>
 
       
     </div>
