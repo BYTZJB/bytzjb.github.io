@@ -6,33 +6,36 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>对象的共享 | YangWei</title>
+  <title>注解Annotation | YangWei</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="重排序
+  <meta name="description" content="基本Annotation @Override 限定必须覆盖父类的方法
+ @Deprecated 标记已经过时 @SuppressWarnings 抑制编译器警告
+ @SafeVarargs 堆污染警告** @FunctionalInterface 函数式接口
 
-在没有同步的情况下，编译器、处理器以及运行时等都可能对操作的执行顺序进行一些意想不到的调整。在缺乏足够同步的多线程程序中，要想对内存造作的执行顺序进行判断，几乎无法得出正确的结论。
+JDK的元Annotaion  元Annotation用于修饰其他Annotation的定义** @Retention
 
-
-非原子的64位操作  在JVM中，允许讲64位的读操作或写操作分解位两个32操作。当读取一个非volatile类型的long变量时，如果对该变量的读操作和写操作在不同的线程中执行，那么很可能会读取到某个">
+用于指定被修饰">
 <meta property="og:type" content="article">
-<meta property="og:title" content="对象的共享">
-<meta property="og:url" content="http://yoursite.com/2016/10/30/对象的共享/index.html">
+<meta property="og:title" content="注解Annotation">
+<meta property="og:url" content="http://yoursite.com/2016/10/31/注解Annotation/index.html">
 <meta property="og:site_name" content="YangWei">
-<meta property="og:description" content="重排序
+<meta property="og:description" content="基本Annotation @Override 限定必须覆盖父类的方法
+ @Deprecated 标记已经过时 @SuppressWarnings 抑制编译器警告
+ @SafeVarargs 堆污染警告** @FunctionalInterface 函数式接口
 
-在没有同步的情况下，编译器、处理器以及运行时等都可能对操作的执行顺序进行一些意想不到的调整。在缺乏足够同步的多线程程序中，要想对内存造作的执行顺序进行判断，几乎无法得出正确的结论。
+JDK的元Annotaion  元Annotation用于修饰其他Annotation的定义** @Retention
 
-
-非原子的64位操作  在JVM中，允许讲64位的读操作或写操作分解位两个32操作。当读取一个非volatile类型的long变量时，如果对该变量的读操作和写操作在不同的线程中执行，那么很可能会读取到某个">
-<meta property="og:updated_time" content="2016-10-30T04:48:38.517Z">
+用于指定被修饰">
+<meta property="og:updated_time" content="2016-10-30T16:43:00.624Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="对象的共享">
-<meta name="twitter:description" content="重排序
+<meta name="twitter:title" content="注解Annotation">
+<meta name="twitter:description" content="基本Annotation @Override 限定必须覆盖父类的方法
+ @Deprecated 标记已经过时 @SuppressWarnings 抑制编译器警告
+ @SafeVarargs 堆污染警告** @FunctionalInterface 函数式接口
 
-在没有同步的情况下，编译器、处理器以及运行时等都可能对操作的执行顺序进行一些意想不到的调整。在缺乏足够同步的多线程程序中，要想对内存造作的执行顺序进行判断，几乎无法得出正确的结论。
+JDK的元Annotaion  元Annotation用于修饰其他Annotation的定义** @Retention
 
-
-非原子的64位操作  在JVM中，允许讲64位的读操作或写操作分解位两个32操作。当读取一个非volatile类型的long变量时，如果对该变量的读操作和写操作在不同的线程中执行，那么很可能会读取到某个">
+用于指定被修饰">
   
     <link rel="alternative" href="/atom.xml" title="YangWei" type="application/atom+xml">
   
@@ -152,7 +155,7 @@
 </nav>
 
       <div class="body-wrap">
-        <article id="post-对象的共享" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-注解Annotation" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -162,7 +165,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      对象的共享
+      注解Annotation
     </h1>
   
 
@@ -171,14 +174,22 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li><p>重排序</p>
+<li><p>基本Annotation<br><strong> @Override 限定必须覆盖父类的方法
+</strong> @Deprecated 标记已经过时<br><strong> @SuppressWarnings 抑制编译器警告
+</strong> @SafeVarargs 堆污染警告<br>** @FunctionalInterface 函数式接口</p>
+</li>
+<li><p>JDK的元Annotaion<br>  元Annotation用于修饰其他Annotation的定义<br>** @Retention</p>
 <blockquote>
-<p>在没有同步的情况下，编译器、处理器以及运行时等都可能对操作的执行顺序进行一些意想不到的调整。在缺乏足够同步的多线程程序中，要想对内存造作的执行顺序进行判断，几乎无法得出正确的结论。</p>
+<p>用于指定被修饰的Annotation可以保留的时间，@Retention包含一个RetentionPolicy类型的变量,用于指定保留时间<br>  RetentionPolicy.CLASS<br>  RetentionPolicy.RUNTIME<br>  RetentionPolicy.SOURCE<br>** @Documented<br>被修饰的Annotation将被javadoc工具提取成文档</p>
 </blockquote>
 </li>
-<li><p>非原子的64位操作<br>  在JVM中，允许讲64位的读操作或写操作分解位两个32操作。当读取一个非volatile类型的long变量时，如果对该变量的读操作和写操作在不同的线程中执行，那么很可能会读取到某个值的高32位和另一个值的低32位。<br>  在多线程中使用共享且可变的long和double等类型变量是不安全的。应该用volatile来声明，或者用锁保护起来。</p>
-</li>
-<li><p>Volatile变量</p>
+</ul>
+<p>** @Inherited</p>
+<blockquote>
+<p>表明被修饰的Annotation将具有继承性</p>
+</blockquote>
+<ul>
+<li>自定义Annotation<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@元Annotation</div><div class="line">public @interface Test &#123;</div><div class="line">    xxx fun() default xxx ;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
 
@@ -186,8 +197,8 @@
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2016/10/30/对象的共享/" class="archive-article-date">
-  	<time datetime="2016-10-30T04:03:13.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-30</time>
+      <a href="/2016/10/31/注解Annotation/" class="archive-article-date">
+  	<time datetime="2016-10-30T16:27:40.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-31</time>
 </a>
       
       
@@ -200,18 +211,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2016/10/31/注解Annotation/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          注解Annotation
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/10/30/线程安全性/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">线程安全性</div>
+    <a href="/2016/10/30/对象的共享/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">对象的共享</div>
       <i class="icon-circle-right"></i>
     </a>
   

@@ -135,6 +135,69 @@
       <div class="body-wrap">
         
   
+    <article id="post-注解Annotation" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/31/注解Annotation/">注解Annotation</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>基本Annotation<br><strong> @Override 限定必须覆盖父类的方法
+</strong> @Deprecated 标记已经过时<br><strong> @SuppressWarnings 抑制编译器警告
+</strong> @SafeVarargs 堆污染警告<br>** @FunctionalInterface 函数式接口</p>
+</li>
+<li><p>JDK的元Annotaion<br>  元Annotation用于修饰其他Annotation的定义<br>** @Retention</p>
+<blockquote>
+<p>用于指定被修饰的Annotation可以保留的时间，@Retention包含一个RetentionPolicy类型的变量,用于指定保留时间<br>  RetentionPolicy.CLASS<br>  RetentionPolicy.RUNTIME<br>  RetentionPolicy.SOURCE<br>** @Documented<br>被修饰的Annotation将被javadoc工具提取成文档</p>
+</blockquote>
+</li>
+</ul>
+<p>** @Inherited</p>
+<blockquote>
+<p>表明被修饰的Annotation将具有继承性</p>
+</blockquote>
+<ul>
+<li>自定义Annotation<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@元Annotation</div><div class="line">public @interface Test &#123;</div><div class="line">    xxx fun() default xxx ;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/10/31/注解Annotation/" class="archive-article-date">
+  	<time datetime="2016-10-30T16:27:40.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-31</time>
+</a>
+      
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-对象的共享" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
