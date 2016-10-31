@@ -8,34 +8,49 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>注解Annotation | YangWei</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基本Annotation @Override 限定必须覆盖父类的方法
- @Deprecated 标记已经过时 @SuppressWarnings 抑制编译器警告
- @SafeVarargs 堆污染警告** @FunctionalInterface 函数式接口
+  <meta name="description" content="[TOC]
+JDK自带的Annotation
+@Override 限定必须覆盖父类的方法
+@Deprecated 标记已经过时
+@SuppressWarnings 抑制编译器警告
+@SafeVarargs 堆污染警告
+@FunctionalInterface 函数式接口
 
-JDK的元Annotaion  元Annotation用于修饰其他Annotation的定义** @Retention
+JDK的元Annotaion元Annotation用于修饰其他Annotation的定义
 
-用于指定被修饰">
+@Retention
+用于指定被修">
 <meta property="og:type" content="article">
 <meta property="og:title" content="注解Annotation">
 <meta property="og:url" content="http://yoursite.com/2016/10/31/注解Annotation/index.html">
 <meta property="og:site_name" content="YangWei">
-<meta property="og:description" content="基本Annotation @Override 限定必须覆盖父类的方法
- @Deprecated 标记已经过时 @SuppressWarnings 抑制编译器警告
- @SafeVarargs 堆污染警告** @FunctionalInterface 函数式接口
+<meta property="og:description" content="[TOC]
+JDK自带的Annotation
+@Override 限定必须覆盖父类的方法
+@Deprecated 标记已经过时
+@SuppressWarnings 抑制编译器警告
+@SafeVarargs 堆污染警告
+@FunctionalInterface 函数式接口
 
-JDK的元Annotaion  元Annotation用于修饰其他Annotation的定义** @Retention
+JDK的元Annotaion元Annotation用于修饰其他Annotation的定义
 
-用于指定被修饰">
-<meta property="og:updated_time" content="2016-10-30T16:43:00.624Z">
+@Retention
+用于指定被修">
+<meta property="og:updated_time" content="2016-10-31T03:18:56.096Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="注解Annotation">
-<meta name="twitter:description" content="基本Annotation @Override 限定必须覆盖父类的方法
- @Deprecated 标记已经过时 @SuppressWarnings 抑制编译器警告
- @SafeVarargs 堆污染警告** @FunctionalInterface 函数式接口
+<meta name="twitter:description" content="[TOC]
+JDK自带的Annotation
+@Override 限定必须覆盖父类的方法
+@Deprecated 标记已经过时
+@SuppressWarnings 抑制编译器警告
+@SafeVarargs 堆污染警告
+@FunctionalInterface 函数式接口
 
-JDK的元Annotaion  元Annotation用于修饰其他Annotation的定义** @Retention
+JDK的元Annotaion元Annotation用于修饰其他Annotation的定义
 
-用于指定被修饰">
+@Retention
+用于指定被修">
   
     <link rel="alternative" href="/atom.xml" title="YangWei" type="application/atom+xml">
   
@@ -173,25 +188,51 @@ JDK的元Annotaion  元Annotation用于修饰其他Annotation的定义** @Retent
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li><p>基本Annotation<br><strong> @Override 限定必须覆盖父类的方法
-</strong> @Deprecated 标记已经过时<br><strong> @SuppressWarnings 抑制编译器警告
-</strong> @SafeVarargs 堆污染警告<br>** @FunctionalInterface 函数式接口</p>
-</li>
-<li><p>JDK的元Annotaion<br>  元Annotation用于修饰其他Annotation的定义<br>** @Retention</p>
-<blockquote>
-<p>用于指定被修饰的Annotation可以保留的时间，@Retention包含一个RetentionPolicy类型的变量,用于指定保留时间<br>  RetentionPolicy.CLASS<br>  RetentionPolicy.RUNTIME<br>  RetentionPolicy.SOURCE<br>** @Documented<br>被修饰的Annotation将被javadoc工具提取成文档</p>
+        <p>[TOC]</p>
+<h2 id="JDK自带的Annotation"><a href="#JDK自带的Annotation" class="headerlink" title="JDK自带的Annotation"></a>JDK自带的Annotation</h2><ul>
+<li>@Override 限定必须覆盖父类的方法</li>
+<li>@Deprecated 标记已经过时</li>
+<li>@SuppressWarnings 抑制编译器警告</li>
+<li>@SafeVarargs 堆污染警告</li>
+<li>@FunctionalInterface 函数式接口</li>
+</ul>
+<h2 id="JDK的元Annotaion"><a href="#JDK的元Annotaion" class="headerlink" title="JDK的元Annotaion"></a>JDK的元Annotaion</h2><p>元Annotation用于修饰其他Annotation的定义</p>
+<ul>
+<li>@Retention<blockquote>
+<p>用于指定被修饰的Annotation可以保留的时间，@Retention包含一个RetentionPolicy类型的变量,用于指定保留时间</p>
+<ul>
+<li>RetentionPolicy.CLASS</li>
+<li>tentionPolicy.RUNTIME</li>
+<li>RetentionPolicy.SOURCE</li>
+</ul>
 </blockquote>
 </li>
-</ul>
-<p>** @Inherited</p>
+<li><p>@Documented</p>
+<blockquote>
+<p>被修饰的Annotation将被javadoc工具提取成文档</p>
+</blockquote>
+</li>
+<li><p>@Inherited</p>
 <blockquote>
 <p>表明被修饰的Annotation将具有继承性</p>
 </blockquote>
-<ul>
-<li>自定义Annotation<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@元Annotation</div><div class="line">public @interface Test &#123;</div><div class="line">    xxx fun() default xxx ;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>@Result</p>
+<blockquote>
+<p>重复注解</p>
+</blockquote>
+</li>
+<li><p>Type Annotation</p>
 </li>
 </ul>
+<h2 id="自定义Annotation"><a href="#自定义Annotation" class="headerlink" title="自定义Annotation"></a>自定义Annotation</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@元Annotation</div><div class="line">public @interface Test &#123;</div><div class="line">    xxx fun() default xxx ;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>##实例 </p>
+<ul>
+<li>简化事件编程，用Annotation添加监听事件<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">/*</div><div class="line"> *定义注解</div><div class="line"> *为方法添加监听器</div><div class="line"> */</div><div class="line">@Target(ElementType.FIELD)</div><div class="line">@Retention(RetentionPolicy.RUNTIME)</div><div class="line">public @interface ActionListenerFor &#123;</div><div class="line"></div><div class="line">	Class&lt;? extends ActionListener&gt; listener() ;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">/*</div><div class="line"> *给方法绑定监听事件</div><div class="line"> */</div><div class="line">public class ActionListenerInstaller &#123;</div><div class="line">	public static void processAnnotations(Object obj) &#123;</div><div class="line">		Class c1 = obj.getClass() ;</div><div class="line">		for(Field f : c1.getDeclaredFields()) &#123;</div><div class="line">			//将该成员变量设置成可自由访问</div><div class="line">			try &#123;</div><div class="line">				f.setAccessible(true);</div><div class="line">				//获取成员变量上ActionListenerFor类型的Annotation</div><div class="line">				ActionListenerFor a = f.getAnnotation(ActionListenerFor.class) ;</div><div class="line">				//获取成员变量f的值</div><div class="line">				Object fObj = f.get(obj) ;</div><div class="line">				//如果f是AbstractButton的实例，且a部位null</div><div class="line">				if (a != null &amp;&amp; fObj != null</div><div class="line">						&amp;&amp; fObj instanceof AbstractButton) &#123;</div><div class="line">					Class&lt;? extends ActionListener&gt; listenerClazz = a.listener();</div><div class="line">					ActionListener a1 = listenerClazz.newInstance() ;</div><div class="line">					AbstractButton ab = (AbstractButton)fObj ;</div><div class="line">					ab.addActionListener(a1);</div><div class="line">				&#125;</div><div class="line">			&#125; catch (SecurityException | IllegalArgumentException | IllegalAccessException | InstantiationException e) &#123;</div><div class="line">				// TODO Auto-generated catch block</div><div class="line">				e.printStackTrace();</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">/*</div><div class="line"> *GUI界面</div><div class="line"> */</div><div class="line">public class AnnotationTest &#123;</div><div class="line"></div><div class="line">	private JFrame mainWin = new JFrame(&quot;使用注解绑定事件监听器&quot;) ;</div><div class="line">	</div><div class="line">	//使用Annotation为ok按钮绑定事件监听器</div><div class="line">	@ActionListenerFor(listener = OKListener.class)</div><div class="line">	private JButton ok = new JButton(&quot;确定&quot;) ;</div><div class="line">	</div><div class="line">	//使用Annotation为cancel按钮绑定事件监听器</div><div class="line">	@ActionListenerFor(listener = CancelListener.class)</div><div class="line">	private JButton cancel = new JButton(&quot;取消&quot;) ;</div><div class="line"></div><div class="line">	public void init() &#123;</div><div class="line">		JPanel jp = new JPanel() ;</div><div class="line">		jp.add(ok) ;</div><div class="line">		jp.add(cancel) ;</div><div class="line">		mainWin.add(jp) ;</div><div class="line">		ActionListenerInstaller.processAnnotations(this) ;</div><div class="line">		mainWin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</div><div class="line">		mainWin.pack() ;</div><div class="line">		mainWin.setVisible(true);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		new AnnotationTest().init() ;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class OKListener implements ActionListener &#123;</div><div class="line"></div><div class="line">	public void actionPerformed(ActionEvent evr) &#123;</div><div class="line">		JOptionPane.showMessageDialog(null, &quot;单击了确认按钮&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class CancelListener implements ActionListener &#123;</div><div class="line">	</div><div class="line">	public void actionPerformed(ActionEvent evt) &#123;</div><div class="line">		JOptionPane.showMessageDialog(null, &quot;单击了取消按钮&quot;);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
