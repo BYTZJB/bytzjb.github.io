@@ -30,7 +30,7 @@
 类的加载由类加载器完成，类加载器通常由JVM提供，JVMT提供的这些类加载器同常被称为系统加载器。开发者可以通过继承ClassLoader基类来创建自己的类加载器。通过使用不同的类加载器，可以从不同来源加载类的二进制数据，通常有如下几种来源。
 
 本地文件">
-<meta property="og:updated_time" content="2016-11-01T05:07:59.137Z">
+<meta property="og:updated_time" content="2016-11-01T06:06:53.174Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="类的加载与反射">
 <meta name="twitter:description" content="类的加载,连接,初始化
@@ -235,8 +235,20 @@
 <p><strong>类加载机制</strong><br><strong>自定义类加载器</strong><br><strong>URLClassLoader类</strong></p>
 </blockquote>
 <h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a><strong>反射</strong></h2><blockquote>
-<p>什么是反射？</p>
+<p>什么是反射？<br>反射就是指在程序运行中，对于任意一个类，都能够知道这个类的素有属性和方法，对于任意一个对象，都能调用他的任意方法和属性。这种动态获取信息以及动态调用对象就是反射。</p>
 </blockquote>
+<h3 id="获取Class对象"><a href="#获取Class对象" class="headerlink" title="获取Class对象"></a><strong>获取Class对象</strong></h3><ul>
+<li>使用Clas类的forName(String clazzName)静态方法。参数是全限定类名。</li>
+<li>调用某个类的class属性来获取该类对应的Class对象。</li>
+<li>调用某个对象的getClass()方法。</li>
+</ul>
+<h4 id="从Class中获取信息"><a href="#从Class中获取信息" class="headerlink" title="从Class中获取信息"></a><strong>从Class中获取信息</strong></h4><h3 id="使用反射生成并操作对象"><a href="#使用反射生成并操作对象" class="headerlink" title="使用反射生成并操作对象"></a><strong>使用反射生成并操作对象</strong></h3><ul>
+<li><strong>创建对象</strong><ul>
+<li>使用Class对象的newInstace()方法来创建实例。</li>
+<li>使用Class对象获取指定的Constructor对象,在调用Constructor对象的newInstance()方法来创建实例。</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
@@ -351,7 +363,7 @@
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				
+    				<a href="/tags/并发编程/" style="font-size: 10px;">并发编程</a>
     			</div>
     	</section>
     
