@@ -8,31 +8,22 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>第三章——对象的共享 | YangWei</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="重排序
+  <meta name="description" content="并发编程的安全性，主要在于访问共享的可变状态时的管理在使用synchronized关键字实现原子操作的同时，往往会丧失性能。我们希望防止某个线程正在使用对象状态而另一个线程同时在修改该状态，而且希望确保当一个线程修改了对象状态之后，其他的线程也能看到发生的状态变化。可以通过显示同步或者类库中设置的同步来确保对象被安全地发布。
 
-在没有同步的情况下，编译器、处理器以及运行时等都可能对操作的执行顺序进行一些意想不到的调整。在缺乏足够同步的多线程程序中，要想对内存造作的执行顺序进行判断，几乎无法得出正确的结论。
-
-
-非原子的64位操作  在JVM中，允许讲64位的读操作或写操作分解位两个32操作。当读取一个非volatile类型的long变量时，如果对该变量的读操作和写操作在不同的线程中执行，那么很可能会读取到某个">
+可见性">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第三章——对象的共享">
 <meta property="og:url" content="http://yoursite.com/2016/10/30/第三章——对象的共享/index.html">
 <meta property="og:site_name" content="YangWei">
-<meta property="og:description" content="重排序
+<meta property="og:description" content="并发编程的安全性，主要在于访问共享的可变状态时的管理在使用synchronized关键字实现原子操作的同时，往往会丧失性能。我们希望防止某个线程正在使用对象状态而另一个线程同时在修改该状态，而且希望确保当一个线程修改了对象状态之后，其他的线程也能看到发生的状态变化。可以通过显示同步或者类库中设置的同步来确保对象被安全地发布。
 
-在没有同步的情况下，编译器、处理器以及运行时等都可能对操作的执行顺序进行一些意想不到的调整。在缺乏足够同步的多线程程序中，要想对内存造作的执行顺序进行判断，几乎无法得出正确的结论。
-
-
-非原子的64位操作  在JVM中，允许讲64位的读操作或写操作分解位两个32操作。当读取一个非volatile类型的long变量时，如果对该变量的读操作和写操作在不同的线程中执行，那么很可能会读取到某个">
-<meta property="og:updated_time" content="2016-11-04T15:02:56.287Z">
+可见性">
+<meta property="og:updated_time" content="2016-11-04T15:19:28.061Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第三章——对象的共享">
-<meta name="twitter:description" content="重排序
+<meta name="twitter:description" content="并发编程的安全性，主要在于访问共享的可变状态时的管理在使用synchronized关键字实现原子操作的同时，往往会丧失性能。我们希望防止某个线程正在使用对象状态而另一个线程同时在修改该状态，而且希望确保当一个线程修改了对象状态之后，其他的线程也能看到发生的状态变化。可以通过显示同步或者类库中设置的同步来确保对象被安全地发布。
 
-在没有同步的情况下，编译器、处理器以及运行时等都可能对操作的执行顺序进行一些意想不到的调整。在缺乏足够同步的多线程程序中，要想对内存造作的执行顺序进行判断，几乎无法得出正确的结论。
-
-
-非原子的64位操作  在JVM中，允许讲64位的读操作或写操作分解位两个32操作。当读取一个非volatile类型的long变量时，如果对该变量的读操作和写操作在不同的线程中执行，那么很可能会读取到某个">
+可见性">
   
     <link rel="alternative" href="/atom.xml" title="YangWei" type="application/atom+xml">
   
@@ -167,18 +158,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li><p>重排序</p>
-<blockquote>
-<p>在没有同步的情况下，编译器、处理器以及运行时等都可能对操作的执行顺序进行一些意想不到的调整。在缺乏足够同步的多线程程序中，要想对内存造作的执行顺序进行判断，几乎无法得出正确的结论。</p>
+        <blockquote>
+<p><strong>并发编程的安全性，主要在于访问共享的可变状态时的管理</strong><br>在使用synchronized关键字实现原子操作的同时，往往会丧失性能。<br>我们希望防止某个线程正在使用对象状态而另一个线程同时在修改该状态，而且希望确保当一个线程修改了对象状态之后，其他的线程也能看到发生的状态变化。<br>可以通过显示同步或者类库中设置的同步来确保对象被安全地发布。</p>
 </blockquote>
-</li>
-<li><p>非原子的64位操作<br>  在JVM中，允许讲64位的读操作或写操作分解位两个32操作。当读取一个非volatile类型的long变量时，如果对该变量的读操作和写操作在不同的线程中执行，那么很可能会读取到某个值的高32位和另一个值的低32位。<br>  在多线程中使用共享且可变的long和double等类型变量是不安全的。应该用volatile来声明，或者用锁保护起来。</p>
-</li>
-<li><p>Volatile变量</p>
-</li>
-</ul>
-
+<h3 id="可见性"><a href="#可见性" class="headerlink" title="可见性"></a>可见性</h3>
       
     </div>
     <div class="article-info article-info-index">
@@ -329,7 +312,7 @@
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/并发编程/" style="font-size: 10px;">并发编程</a>
+    				<a href="/tags/多线程编程/" style="font-size: 10px;">多线程编程</a> <a href="/tags/并发编程/" style="font-size: 20px;">并发编程</a>
     			</div>
     	</section>
     
