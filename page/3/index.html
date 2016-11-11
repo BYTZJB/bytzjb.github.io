@@ -6,21 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>第三章——对象的共享 | YangWei</title>
+  <title>YangWei</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="并发编程的安全性，主要在于访问共享的可变状态时的管理在使用synchronized关键字实现原子操作的同时，往往会丧失性能。我们希望防止某个线程正在使用对象状态而另一个线程同时在修改该状态，而且希望确保当一个线程修改了对象状态之后，其他的线程也能看到发生的状态变化。可以通过显示同步或者类库中设置的同步来确保对象被安全地发布。
-可见性通常无法确保执行读的操作的线程能适时地看到其他线程写入的值。重排序">
-<meta property="og:type" content="article">
-<meta property="og:title" content="第三章——对象的共享">
-<meta property="og:url" content="http://yoursite.com/2016/10/30/第三章——对象的共享/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="YangWei">
+<meta property="og:url" content="http://yoursite.com/page/3/index.html">
 <meta property="og:site_name" content="YangWei">
-<meta property="og:description" content="并发编程的安全性，主要在于访问共享的可变状态时的管理在使用synchronized关键字实现原子操作的同时，往往会丧失性能。我们希望防止某个线程正在使用对象状态而另一个线程同时在修改该状态，而且希望确保当一个线程修改了对象状态之后，其他的线程也能看到发生的状态变化。可以通过显示同步或者类库中设置的同步来确保对象被安全地发布。
-可见性通常无法确保执行读的操作的线程能适时地看到其他线程写入的值。重排序">
-<meta property="og:updated_time" content="2016-11-04T16:16:57.994Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第三章——对象的共享">
-<meta name="twitter:description" content="并发编程的安全性，主要在于访问共享的可变状态时的管理在使用synchronized关键字实现原子操作的同时，往往会丧失性能。我们希望防止某个线程正在使用对象状态而另一个线程同时在修改该状态，而且希望确保当一个线程修改了对象状态之后，其他的线程也能看到发生的状态变化。可以通过显示同步或者类库中设置的同步来确保对象被安全地发布。
-可见性通常无法确保执行读的操作的线程能适时地看到其他线程写入的值。重排序">
+<meta name="twitter:title" content="YangWei">
   
     <link rel="alternative" href="/atom.xml" title="YangWei" type="application/atom+xml">
   
@@ -137,7 +130,9 @@
 </nav>
 
       <div class="body-wrap">
-        <article id="post-第三章——对象的共享" class="article article-type-post" itemscope itemprop="blogPost">
+        
+  
+    <article id="post-myFirstActile" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -146,8 +141,8 @@
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      第三章——对象的共享
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/29/myFirstActile/">myFirstActile</a>
     </h1>
   
 
@@ -155,106 +150,40 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>并发编程的安全性，主要在于访问共享的可变状态时的管理</strong><br>在使用synchronized关键字实现原子操作的同时，往往会丧失性能。<br>我们希望防止某个线程正在使用对象状态而另一个线程同时在修改该状态，而且希望确保当一个线程修改了对象状态之后，其他的线程也能看到发生的状态变化。<br>可以通过显示同步或者类库中设置的同步来确保对象被安全地发布。</p>
-<h3 id="可见性"><a href="#可见性" class="headerlink" title="可见性"></a>可见性</h3><p>通常无法确保执行读的操作的线程能适时地看到其他线程写入的值。<br><strong>重排序</strong>：在没有同步的情况下，编译器，处理器都可能对程序的执行顺序进行一些意想不到的调整。<br>因为重排序，使得我们无法对内存操作的执行顺序做出判断。</p>
-<h4 id="非原子的64位操作"><a href="#非原子的64位操作" class="headerlink" title="非原子的64位操作"></a>非原子的64位操作</h4><p>Java内存模型要求，变量的读取和写入都必须是原子操作，但对于非volatile类型的long和double变量，JVM允许将64位读和写分解为两个32位的操作。这会导致访问long和double变量是不安全的。</p>
-<h4 id="加锁与可见性"><a href="#加锁与可见性" class="headerlink" title="加锁与可见性"></a>加锁与可见性</h4><blockquote>
-<p>加锁的含义不仅仅局限于互斥行为，还包括内存可见性。为了确保所有线程都能看到共享变量的最新值，所有执行读操作或者写操作的线程都必须在同一个锁上同步。</p>
+        <h1 id="Begin"><a href="#Begin" class="headerlink" title="Begin"></a>Begin</h1><blockquote>
+<p><strong>人类的梦想是不会终结的！贼哈哈哈哈</strong></p>
 </blockquote>
-<h4 id="Volatile变量"><a href="#Volatile变量" class="headerlink" title="Volatile变量"></a>Volatile变量</h4><p>当变量声明为volatile类型后，起到了提醒编译器与运行时注意到这个变量是共享的，因此不会将该变量上的操作域其他内存操作一起重排序。因此读取volatile类型的变量时，总会返回一个最新写入的值。<br>从内存可见性的角度来看，写入volatile变量相当于退出同步代码块，读取相当于进入同步代码块。</p>
-<h3 id="发布与逸出"><a href="#发布与逸出" class="headerlink" title="发布与逸出"></a>发布与逸出</h3>
+
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2016/10/30/第三章——对象的共享/" class="archive-article-date">
-  	<time datetime="2016-10-30T04:03:13.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-30</time>
+      <a href="/2016/10/29/myFirstActile/" class="archive-article-date">
+  	<time datetime="2016-10-29T04:38:26.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-29</time>
 </a>
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/并发编程/">并发编程</a></li></ul>
-	</div>
-
       
-	<div class="article-category tagcloud">
-	<i class="icon-price-tags"></i>
-	<a class="article-category-link" href="/categories/Java并发编程实战/">Java并发编程实战</a>
-	</div>
-
 
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-  
-<nav id="article-nav">
-  
-    <a href="/2016/10/31/注解Annotation/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          注解Annotation
-        
-      </div>
-    </a>
+
+
+
+
+
+
+
+
+
   
   
-    <a href="/2016/10/30/第二章——线程安全性/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">第二章——线程安全性</div>
-      <i class="icon-circle-right"></i>
-    </a>
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    </nav>
   
-</nav>
-
-
-
-
-<div class="share_jia">
-	<!-- JiaThis Button BEGIN -->
-	<div class="jiathis_style">
-		<span class="jiathis_txt">Share to: &nbsp; </span>
-		<a class="jiathis_button_facebook"></a> 
-	    <a class="jiathis_button_twitter"></a>
-	    <a class="jiathis_button_plus"></a> 
-	    <a class="jiathis_button_tsina"></a>
-		<a class="jiathis_button_cqq"></a>
-		<a class="jiathis_button_douban"></a>
-		<a class="jiathis_button_weixin"></a>
-		<a class="jiathis_button_tumblr"></a>
-    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-	</div>
-	<script type="text/javascript" src="//v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
-	<!-- JiaThis Button END -->
-</div>
-
-
-
-
-
-
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="第三章——对象的共享" data-title="第三章——对象的共享" data-url="http://yoursite.com/2016/10/30/第三章——对象的共享/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"true"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-
-
 
 
       </div>
@@ -276,8 +205,8 @@
 		fancybox: true,
 		mathjax: false,
 		animate: true,
-		isHome: false,
-		isPost: true,
+		isHome: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
